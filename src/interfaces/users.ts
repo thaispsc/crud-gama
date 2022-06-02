@@ -16,3 +16,7 @@ export const createUser = (user: Omit<User, "id">): Promise<User> => {
 export const deleteUser = async (id: number): Promise<void> => {
     await api.delete(`/users/${id}`)
 }
+
+export const updateUser = (id: number, user: Omit<User, "id">): Promise<User> => {
+    return api.put<User>(`/users/${id}`, user).then(response => response.data)
+}
