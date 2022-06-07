@@ -19,6 +19,10 @@ const ModalEditUser: React.FC<ModalEditUserProps> = ({
         initialValues: {
           nome: show.nome? show.nome : '',
           idade: show.idade? show.idade: 0,
+          cpf: show.cpf? show.cpf: 0,
+          endereco: show.endereco? show.endereco: '',
+          email: show.email? show.email: '',
+          telefone: show.telefone? show.telefone: ''
         },
         onSubmit: values => {
           updateUser(
@@ -26,6 +30,10 @@ const ModalEditUser: React.FC<ModalEditUserProps> = ({
             {
             nome: values.nome,
             idade: values.idade,
+            cpf: values.cpf,
+            endereco: values.endereco,
+            email: values.email,
+            telefone: values.telefone
           })
           onHide()
         }
@@ -54,6 +62,46 @@ const ModalEditUser: React.FC<ModalEditUserProps> = ({
             type="number"
             placeholder="Sua idade"
             value={formik.values.idade}
+            onChange={formik.handleChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-5">
+          <Form.Label>CPF</Form.Label>
+          <Form.Control
+            id="cpf"
+            type="number"
+            placeholder="Seu cpf"
+            value={formik.values.cpf}
+            onChange={formik.handleChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-5">
+          <Form.Label>Endereço</Form.Label>
+          <Form.Control
+            id="endereco"
+            type="string"
+            placeholder="Seu endereço"
+            value={formik.values.endereco}
+            onChange={formik.handleChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-5">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            id="email"
+            type="string"
+            placeholder="Seu email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-5">
+          <Form.Label>Telefone</Form.Label>
+          <Form.Control
+            id="telefone"
+            type="string"
+            placeholder="Seu telefone"
+            value={formik.values.telefone}
             onChange={formik.handleChange}
           />
         </Form.Group>

@@ -2,18 +2,39 @@
   "users": [
     {
       "nome": "Ziriguidum",
-      "idade": 32,
+      "idade": 26,
+      "cpf": 95362864459,
+      "endereco": "sdkdkjkdjd",
+      "email": "ziriquidum@email.com",
+      "telefone": "88888888",
       "id": 1
     },
     {
       "nome": "Ziriguidunho Junior",
       "idade": 14,
+      "cpf": 10562550832,
+      "endereco": "kjfmmsknfmgkffk",
+      "email": "zirijr@email.com",
+      "telefone": "988855265",
       "id": 2
     },
     {
       "nome": "Ziriguidunho Neto",
       "idade": 5,
+      "cpf": 25069855621,
+      "endereco": "kjsjkdjjjejr",
+      "email": "zirineto@email.com",
+      "telefone": "99586264",
       "id": 3
+    },
+    {
+      "nome": "Thais",
+      "idade": 25,
+      "cpf": 23847482923,
+      "endereco": "ssss",
+      "email": "thais@email.com",
+      "telefone": "99999999",
+      "id": 4
     }
   ]
 }

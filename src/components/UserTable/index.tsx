@@ -23,6 +23,7 @@ const UserTable: React.FC<UserTableProps> = ({
           <th>#</th>
           <th>Nome</th>
           <th>Idade</th>
+          <th>CPF</th>
           <th>Ações</th>
         </tr>
       </thead>
@@ -32,6 +33,7 @@ const UserTable: React.FC<UserTableProps> = ({
             <td>{user.id}</td>
             <td>{user.nome}</td>
             <td>{user.idade}</td>
+            <td>{user.cpf}</td>
             <td style={{width: "10rem"}}>
                 <Button 
                     type="button"
