@@ -36,5 +36,34 @@
       "telefone": "99999999",
       "id": 4
     }
+  ],
+  "fornecedores": [
+    {
+      "razao-social": "Aramazem",
+      "cnpj": 26,
+      "endereco": "sdkdkjkdjd",
+      "email": "armazem@email.com",
+      "telefone": "88888888",
+      "id": 1
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Aramazem",
+      "descricao": "smdmdmdkkdkd",
+      "preco": 52.00,
+      "quantidade": 3,
+      "id": 1
+    }
+  ],
+  "entregas": [
+    {
+      "nome": "Sedex",
+      "cnpj": 26,
+      "endereco": "sdkdkjkdjd",
+      "email": "sedex@email.com",
+      "telefone": "88888888",
+      "id": 1
+    }
   ]
 }
