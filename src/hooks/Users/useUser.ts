@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { renderUsers, createUser, updateUser, deleteUser } from '../interfaces/users';
-import { User } from '../types';
+import { renderUsers, createUser, updateUser, deleteUser } from '../../interfaces/users';
+import { User } from '../../types';
 
 // import { Container } from './styles';
 

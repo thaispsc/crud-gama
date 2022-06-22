@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {User} from '../types';
+import {User} from '../../types';
 
 const useModal = () => {
   const [userCreateModal, setUserCreateModal] = useState<boolean>(false);
