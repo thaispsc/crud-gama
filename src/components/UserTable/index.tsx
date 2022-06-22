@@ -7,12 +7,14 @@ interface UserTableProps {
     users: User[];
     onDelete: (id: number) => void;
     onClick: (user: User) => void;
+    dados: string[]; 
 }
 
 const UserTable: React.FC<UserTableProps> = ({
     users,
     onDelete,
-    onClick
+    onClick,
+    dados
 }) => {
   return (
     <Container fluid="sm" style={{marginTop: 25}}>
@@ -20,10 +22,10 @@ const UserTable: React.FC<UserTableProps> = ({
     <Table striped borderless responsive hover variant="light">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Nome</th>
-          <th>Idade</th>
-          <th>CPF</th>
+        <th>#</th>
+          {dados.map(dado => (
+            <th>{dado}</th>
+          ))}
           <th>Ações</th>
         </tr>
       </thead>
@@ -34,6 +36,9 @@ const UserTable: React.FC<UserTableProps> = ({
             <td>{user.nome}</td>
             <td>{user.idade}</td>
             <td>{user.cpf}</td>
+            <td>{user.endereco}</td>
+            <td>{user.email}</td>
+            <td>{user.telefone}</td>
             <td style={{width: "10rem"}}>
                 <Button 
                     type="button"
