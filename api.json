@@ -28,13 +28,58 @@
       "id": 3
     },
     {
-      "nome": "Thais",
-      "idade": 25,
-      "cpf": 23847482923,
-      "endereco": "ssss",
+      "nome": "thais",
       "email": "thais@email.com",
-      "telefone": "99999999",
+      "senha": "87654321",
+      "confirmarSenha": "87654321",
+      "apartamento": "1901",
+      "imagem": "dkdjdjd",
       "id": 4
+    },
+    {
+      "nome": "thais",
+      "email": "thais@email.com",
+      "senha": "87654321",
+      "confirmarSenha": "87654321",
+      "apartamento": "1901",
+      "imagem": "dkdjdjd",
+      "id": 5
+    },
+    {
+      "nome": "thais",
+      "email": "thais@email.com",
+      "senha": "87654321",
+      "confirmarSenha": "87654321",
+      "apartamento": "1901",
+      "imagem": "dkdjdjd",
+      "id": 6
+    },
+    {
+      "nome": "thais",
+      "email": "thais@email.com",
+      "senha": "87654321",
+      "confirmarSenha": "87654321",
+      "apartamento": "1901",
+      "imagem": "dkdjdjd",
+      "id": 7
+    },
+    {
+      "nome": "thais",
+      "email": "thais@email.com",
+      "senha": "87654321",
+      "confirmarSenha": "87654321",
+      "apartamento": "1901",
+      "imagem": "dkdjdjd",
+      "id": 8
+    },
+    {
+      "nome": "thais",
+      "email": "thais@email.com",
+      "senha": "87654321",
+      "confirmarSenha": "87654321",
+      "apartamento": "1901",
+      "imagem": "dkdjdjd",
+      "id": 9
     }
   ],
   "fornecedores": [
@@ -51,7 +96,7 @@
     {
       "nome": "Aramazem",
       "descricao": "smdmdmdkkdkd",
-      "preco": 52.00,
+      "preco": 52,
       "quantidade": 3,
       "id": 1
     }
