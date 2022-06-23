@@ -6,26 +6,23 @@ import {BsTrashFill, BsPenFill } from "react-icons/bs"
 interface UserTableProps {
     users: User[];
     onDelete: (id: number) => void;
-    onClick: (user: User) => void;
-    dados: string[]; 
+    onClick: (user: User) => void; 
 }
 
 const UserTable: React.FC<UserTableProps> = ({
     users,
     onDelete,
-    onClick,
-    dados
+    onClick
 }) => {
   return (
     <Container fluid="sm" style={{marginTop: 25}}>
     <h1>Lista de Usuários</h1>
     <Table striped borderless responsive hover variant="light">
-      <thead>
+    <thead>
         <tr>
-        <th>#</th>
-          {dados.map(dado => (
-            <th>{dado}</th>
-          ))}
+          <th>#</th>
+          <th>Nome</th>
+          <th>Idade</th>
           <th>Ações</th>
         </tr>
       </thead>

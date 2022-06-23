@@ -94,8 +94,7 @@ function User(): JSX.Element {
       <UserTable
       onClick={handleOpenEditUserModal}
         users={userList} 
-        onDelete={handleDeleteUser} 
-        dados = {['Nome', 'Idade', 'CPF', 'Endereço', 'Email', 'Telefone' ]}
+        onDelete={handleDeleteUser}
       />
       {/*Modal de criação do usuario*/}
       <ModalCreateUser 
