@@ -32,10 +32,6 @@ const UserTable: React.FC<UserTableProps> = ({
             <td>{user.id}</td>
             <td>{user.nome}</td>
             <td>{user.idade}</td>
-            <td>{user.cpf}</td>
-            <td>{user.endereco}</td>
-            <td>{user.email}</td>
-            <td>{user.telefone}</td>
             <td style={{width: "10rem"}}>
                 <Button 
                     type="button"
