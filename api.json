@@ -26,60 +26,6 @@
       "email": "zirineto@email.com",
       "telefone": "99586264",
       "id": 3
-    },
-    {
-      "nome": "thais",
-      "email": "thais@email.com",
-      "senha": "87654321",
-      "confirmarSenha": "87654321",
-      "apartamento": "1901",
-      "imagem": "dkdjdjd",
-      "id": 4
-    },
-    {
-      "nome": "thais",
-      "email": "thais@email.com",
-      "senha": "87654321",
-      "confirmarSenha": "87654321",
-      "apartamento": "1901",
-      "imagem": "dkdjdjd",
-      "id": 5
-    },
-    {
-      "nome": "thais",
-      "email": "thais@email.com",
-      "senha": "87654321",
-      "confirmarSenha": "87654321",
-      "apartamento": "1901",
-      "imagem": "dkdjdjd",
-      "id": 6
-    },
-    {
-      "nome": "thais",
-      "email": "thais@email.com",
-      "senha": "87654321",
-      "confirmarSenha": "87654321",
-      "apartamento": "1901",
-      "imagem": "dkdjdjd",
-      "id": 7
-    },
-    {
-      "nome": "thais",
-      "email": "thais@email.com",
-      "senha": "87654321",
-      "confirmarSenha": "87654321",
-      "apartamento": "1901",
-      "imagem": "dkdjdjd",
-      "id": 8
-    },
-    {
-      "nome": "thais",
-      "email": "thais@email.com",
-      "senha": "87654321",
-      "confirmarSenha": "87654321",
-      "apartamento": "1901",
-      "imagem": "dkdjdjd",
-      "id": 9
     }
   ],
   "fornecedores": [
