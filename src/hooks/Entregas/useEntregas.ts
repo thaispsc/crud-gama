@@ -13,7 +13,7 @@ const useEntrega = () => {
 
        // Função para adicionar um novo usuário
   const handleCreateEntrega = async (entrega: Omit<Entrega, "id">) => {
-    const newEntrega = await createFornecedor(entrega)
+    const newEntrega = await createEntrega(entrega)
     setEntregas(
       oldEntregaList => [...oldEntregaList, newEntrega]
     )
