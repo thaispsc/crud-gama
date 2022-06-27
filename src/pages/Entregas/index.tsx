@@ -1,57 +1,49 @@
-import { Fragment } from 'react'
-import Navbar from "../../components/Navbar"
-import UserTable from "../../components/UserTable"
-import ModalCreateUser from '../../components/ModalCreateUser'
-import ModalEditUser from '../../components/ModalEditUser'
-import useModal from '../../hooks/Users/useModal'
-import useUser from '../../hooks/Users/useUser'
+import { Fragment } from "react";
+import Navbar from "../../components/Navbar";
+import EntregaTable from "../../components/EntregaTable";
+import ModalCreateEntrega from "../../components/ModalCreateEntrega";
+import ModalEditEntrega from "../../components/ModalEditEntrega";
+import useModal from "../../hooks/Entregas/useModal";
+import useEntregas from "../../hooks/Entregas/useEntregas";
 
-
-function Entregas(): JSX.Element {
-
-
+function Entrega(): JSX.Element {
   const {
-    userCreateModal,
-    handleOpenCreateUserModal,
-    handleCloseCreateUserModal,
-    userEditModal,
-    handleOpenEditUserModal,
-    handleCloseEditUserModal
-  } = useModal()
+    entregaCreateModal,
+    handleOpenCreateEntregaModal,
+    handleCloseCreateEntregaModal,
+    entregaEditModal,
+    handleOpenEditEntregaModal,
+    handleCloseEditEntregaModal,
+  } = useModal();
   const {
-    userList,
-    handleCreateUser,
-  handleDeleteUser,
-  handleUpdateUser
-} = useUser()
-  
+    entregaList,
+    handleCreateEntrega,
+    handleDeleteEntrega,
+    handleUpdateEntrega,
+  } = useEntregas();
+
   return (
     <Fragment>
-      {/*Navbar*/}
-      <Navbar onClick={handleOpenCreateUserModal} />
-      {/*Container*/}
-      <UserTable
-      onClick={handleOpenEditUserModal}
-        users={userList} 
-        onDelete={handleDeleteUser} 
-        dados = {['Nome', 'CNPJ', 'Endereço', 'Email', 'Telefone' ]}
+      <Navbar 
+      onClick={handleOpenCreateEntregaModal}
+      entityName={"Entrega"} />
+      <EntregaTable
+        onClick={handleOpenEditEntregaModal}
+        entregas={entregaList}
+        onDelete={handleDeleteEntrega}
       />
-      {/*Modal de criação do usuario*/}
-      <ModalCreateUser 
-        show={userCreateModal} 
-        createUser={handleCreateUser}
-        onHide={handleCloseCreateUserModal}
+      <ModalCreateEntrega
+        show={entregaCreateModal}
+        createEntrega={handleCreateEntrega}
+        onHide={handleCloseCreateEntregaModal}
       />
-      {/*Modal de edição de usuario*/}
-
-      <ModalEditUser 
-        show={userEditModal} 
-        updateUser={handleUpdateUser}
-        onHide={handleCloseEditUserModal}
+      <ModalEditEntrega
+        show={entregaEditModal}
+        updateEntrega={handleUpdateEntrega}
+        onHide={handleCloseEditEntregaModal}
       />
-      
     </Fragment>
-  )
+  );
 }
 
-export default Entregas;
+export default Entrega;

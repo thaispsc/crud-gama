@@ -27,7 +27,9 @@ function User(): JSX.Element {
   
   return (
     <Fragment>
-      <Navbar onClick={handleOpenCreateUserModal} />
+      <Navbar 
+      onClick={handleOpenCreateUserModal}
+      entityName={"Usuário"} />
       <UserTable
       onClick={handleOpenEditUserModal}
         users={userList} 

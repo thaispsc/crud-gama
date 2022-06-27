@@ -1,57 +1,54 @@
-import { Fragment } from 'react'
-import Navbar from "../../components/Navbar"
-import UserTable from "../../components/UserTable"
-import ModalCreateUser from '../../components/ModalCreateUser'
-import ModalEditUser from '../../components/ModalEditUser'
-import useModal from '../../hooks/Fornecedores/useModal';
-import useFornecedor from '../../hooks/Fornecedores/useFornecedor'
-
+import { Fragment } from "react";
+import Navbar from "../../components/Navbar";
+import FornecedorTable from "../../components/FornecedorTable";
+import ModalCreateFornecedor from "../../components/ModalCreateFornecedor";
+import ModalEditFornecedor from "../../components/ModalEditFornecedor";
+import useModal from "../../hooks/Fornecedores/useModal";
+import useFornecedor from "../../hooks/Fornecedores/useFornecedor";
 
 function Fornecedores(): JSX.Element {
-
-
   const {
     fornecedorCreateModal,
     handleOpenCreateFornecedorModal,
     handleCloseCreateFornecedorModal,
     fornecedorEditModal,
     handleOpenEditFornecedorModal,
-    handleCloseEditFornecedorModal
-  } = useModal()
+    handleCloseEditFornecedorModal,
+  } = useModal();
   const {
     fornecedorList,
     handleCreateFornecedor,
-  handleDeleteFornecedor,
-  handleUpdateFornecedor
-} = useFornecedor()
-  
+    handleDeleteFornecedor,
+    handleUpdateFornecedor,
+  } = useFornecedor();
+
   return (
     <Fragment>
       {/*Navbar*/}
-      <Navbar onClick={handleOpenCreateFornecedorModal} />
+      <Navbar 
+      onClick={handleOpenCreateFornecedorModal}
+      entityName={"Fornecedor"} />
       {/*Container*/}
-      <UserTable
-      onClick={handleOpenEditFornecedorModal}
-        Fornecedors={fornecedorList} 
-        onDelete={handleDeleteFornecedor} 
-        dados = {['Nome', 'CNPJ', 'Endereço', 'Email', 'Telefone' ]}
+      <FornecedorTable
+        onClick={handleOpenEditFornecedorModal}
+        fornecedores={fornecedorList}
+        onDelete={handleDeleteFornecedor}
       />
       {/*Modal de criação do usuario*/}
-      <ModalCreateUser 
-        show={fornecedorCreateModal} 
+      <ModalCreateFornecedor
+        show={fornecedorCreateModal}
         createFornecedor={handleCreateFornecedor}
         onHide={handleCloseCreateFornecedorModal}
       />
       {/*Modal de edição de usuario*/}
 
-      <ModalEditUser 
-        show={fornecedorEditModal} 
+      <ModalEditFornecedor
+        show={fornecedorEditModal}
         updateFornecedor={handleUpdateFornecedor}
         onHide={handleCloseEditFornecedorModal}
       />
-      
     </Fragment>
-  )
+  );
 }
 
 export default Fornecedores;
