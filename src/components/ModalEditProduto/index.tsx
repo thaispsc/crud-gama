@@ -6,13 +6,13 @@ import { Produto } from '../../types';
 interface ModalEditProdutoProps {
     show: Produto;
     onHide: () => void;
-    editProduto: (produto: Omit<Produto, 'id'>) => void;
+    updateProduto: (id: number, produto: Omit<Produto, 'id'>) => void;
 }
 
 const ModalEditProduto: React.FC<ModalEditProdutoProps> = ({
     show,
     onHide,
-    editProduto
+    updateProduto
 }) => {
     const formik = useFormik({
         enableReinitialize: true,
@@ -23,7 +23,9 @@ const ModalEditProduto: React.FC<ModalEditProdutoProps> = ({
           quantidade: show.quantidade? show.quantidade: 0
         },
         onSubmit: values => {
-          editProduto({
+          updateProduto(
+            show.id,
+            {
             nome: values.nome,
             descricao: values.descricao,
             preco: values.preco,

@@ -6,13 +6,13 @@ import { Entrega } from '../../types';
 interface ModalEditEntregaProps {
     show: Entrega;
     onHide: () => void;
-    editEntrega: (entrega: Omit<Entrega, 'id'>) => void;
+    updateEntrega: (id: number, entrega: Omit<Entrega, 'id'>) => void;
 }
 
 const ModalEditEntrega: React.FC<ModalEditEntregaProps> = ({
     show,
     onHide,
-    editEntrega
+    updateEntrega
 }) => {
     const formik = useFormik({
         enableReinitialize: true,
@@ -24,7 +24,9 @@ const ModalEditEntrega: React.FC<ModalEditEntregaProps> = ({
           telefone: show.telefone? show.telefone: ''
         },
         onSubmit: values => {
-          editEntrega({
+          updateEntrega(
+            show.id,
+            {
             nome: values.nome,
             cnpj: values.cnpj,
             endereco: values.endereco,
