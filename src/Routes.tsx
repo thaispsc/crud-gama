@@ -3,6 +3,7 @@ import {Routes as WrapperRoutes, Route, BrowserRouter} from 'react-router-dom';
 import User from './pages/Users';
 import Entregas from './pages/Entregas';
 import Fornecedores from './pages/Fornecedores';
+import Produtos from './pages/Produtos'
 
 function Routes(): JSX.Element {
     return (
@@ -11,7 +12,7 @@ function Routes(): JSX.Element {
             <Route path='/' element={<User />}></Route>
             <Route path='/entregas' element={<Entregas />}></Route>
             <Route path='/fornecedores' element={<Fornecedores />}></Route>
-            {/* <Route path='/produtos' element={<Produtos />}></Route> */}
+            <Route path='/produtos' element={<Produtos />}></Route>
         </WrapperRoutes>
         </BrowserRouter>
     )
