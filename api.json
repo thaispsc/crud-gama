@@ -30,10 +30,10 @@
   ],
   "fornecedores": [
     {
-      "razao-social": "Aramazem",
-      "cnpj": 26,
+      "razao": "Shein",
+      "cnpj": "445678902",
       "endereco": "sdkdkjkdjd",
-      "email": "armazem@email.com",
+      "email": "shein@email.com",
       "telefone": "88888888",
       "id": 1
     }
